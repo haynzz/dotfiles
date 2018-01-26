@@ -1,2 +1,2 @@
-ln ~/src/dotfiles/zshrc ~/.zshrc
+ln ~/Repos/dotfiles/zshrc ~/.zshrc
 ./osx/set-defaults.sh
