@@ -63,10 +63,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source ~/.profile
+# source ~/.profile
 
 export EDITOR='sublime -w'
 export ANDROID_HOME=~/Library/Android/sdk
+export PATH=/usr/local/Cellar/app-engine-java/1.9.63/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -105,4 +106,4 @@ alias ohmyzsh="sublime ~/.oh-my-zsh"
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
-source $HOME/.zshenv
+# source $HOME/.zshenv
