@@ -1,9 +1,6 @@
 export MYZSH=$HOME/Repos/dotfiles/zsh
 for config_file ($MYZSH/**/*.zsh ) source $config_file
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
