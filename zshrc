@@ -10,7 +10,7 @@ for config_file ($MYZSH/**/*.zsh ) source $config_file
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -57,7 +57,7 @@ ZSH_THEME="agnoster"
 plugins=(
     git 
     ssh-agent 
-    rvm 
+    #rvm 
     ruby 
     zsh-syntax-highlighting
     zsh-autosuggestions
@@ -69,9 +69,7 @@ source $ZSH/oh-my-zsh.sh
 
 # source ~/.profile
 
-export EDITOR='sublime -w'
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=/usr/local/Cellar/app-engine-java/1.9.63/bin:$PATH
+export EDITOR='code'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -97,8 +95,8 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="sublime ~/.zshrc"
-alias ohmyzsh="sublime ~/.oh-my-zsh"
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
