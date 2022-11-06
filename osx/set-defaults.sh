@@ -18,8 +18,24 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # Show the home folder instead of all files when opening a new finder window
 defaults write com.apple.finder NewWindowTarget PfHm
 
-# Don't include the name when copying the email address in mail
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool NO
+#Show hidden files:
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
+#Autohide dock:
+defaults write com.apple.dock autohide 1
+
+# Show Battery percentage in MenuBar
+defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist BatteryShowPercentage -bool true
+
+#enable several menu-bar icons, including Bluetooth.
+# https://apple.stackexchange.com/questions/306867/can-defaults-write-command-line-configure-the-menu-bar-on-macos
+# defaults write com.apple.systemuiserver menuExtras -array \
+# "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+# "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+# "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+# "/System/Library/CoreServices/Menu Extras/Displays.menu" \
+# "/System/Library/CoreServices/Menu Extras/Volume.menu"
+
 
 # Top right screen corner → Desktop
 defaults write com.apple.dock wvous-tr-corner -int 4
@@ -34,7 +50,7 @@ defaults write com.apple.dock wvous-br-corner -int 5
 defaults write com.apple.dock wvous-br-modifier -int 0
 
 # Disable Gatekeeper
-sudo spctl --master-disable
+#sudo spctl --master-disable
 
 # Enable calculate all sizes
 /usr/libexec/PlistBuddy "$HOME/Library/Preferences/com.apple.finder.plist" -c 'Delete "StandardViewSettings:ExtendedListViewSettings:calculateAllSizes" bool'
@@ -45,3 +61,6 @@ sudo spctl --master-disable
 
 # Disable iCloud as default save location
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Don't include the name when copying the email address in mail
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool NO
