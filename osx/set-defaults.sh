@@ -64,3 +64,7 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Don't include the name when copying the email address in mail
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool NO
+
+killall Dock
+killall Finder
+killall SystemUIServer

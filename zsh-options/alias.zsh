@@ -1,1 +1,1 @@
-alias cdc="cd ~/code"
+#alias cdc="cd ~/code"
