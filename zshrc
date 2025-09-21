@@ -4,7 +4,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export MYZSH=$HOME/Repos/dotfiles/zsh
+# set dotfiles path in a variable 
+MYDOTFILES=$HOME/Repos/dotfiles
+export MYZSH=$MYDOTFILES/zsh
 
 #Source all files from subfolders
 for config_file ($MYZSH/**/*.zsh ) source $config_file
@@ -56,15 +58,14 @@ for config_file ($MYZSH/**/*.zsh ) source $config_file
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+plugins+=(zsh-nvm dotenv)
 # plugins=(
+#     nvm
 #     git 
-#     ssh-agent 
+#     ssh-agent
 #     node
 #     npm
 #     yarn
-#     nvm
-#     #rvm 
-#     ruby 
 #     zsh-syntax-highlighting
 #     zsh-autosuggestions
 # )
@@ -103,6 +104,7 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # Example aliases
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
+alias resource="source ~/.zshrc"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
@@ -120,3 +122,6 @@ export PATH="/usr/local/sbin:$PATH"
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/fcheraghi/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/fcheraghi/node_modules/tabtab/.completions/slss.zsh
+source /Users/fcheraghi/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+alias claude="/Users/fcheraghi/.claude/local/claude"
